@@ -21,3 +21,13 @@ Make sure that you have the following installed:
  `npm start`
 
  ### Go ahead a nd add a product (note that the price field only takes a numeric input)
+
+## Ansible Playbook
+Required files
+
+docker.yaml -Contains scripts for installing docker in the created server instances
+facts.yaml-Contains scrips that gives facts about the instances
+nodesjs.yaml-Contains scripts for installing node js and npm in the created server instances
+ping.yaml - Used to ping all hosts
+yolo-docker-containers.yaml-Contains images that will run on the hosts-Frontend and Backend
+inventory.yaml-contains all hosts.

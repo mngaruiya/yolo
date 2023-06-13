@@ -1,0 +1,12 @@
+---
+plugin: gcp
+
+projects:
+  - project_id
+
+auth_kind: serviceaccount
+service_account_file: /Users/J-PC/Desktop/ServiceKey/moringa-387909-255a48a242ce.json
+
+inventory:
+  - name: gcp_hosts
+    ungrouped: true

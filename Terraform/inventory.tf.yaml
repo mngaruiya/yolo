@@ -10,3 +10,5 @@ service_account_file: /Users/J-PC/Desktop/ServiceKey/moringa-387909-255a48a242ce
 inventory:
   - name: gcp_hosts
     ungrouped: true
+
+    

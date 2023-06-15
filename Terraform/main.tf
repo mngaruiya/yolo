@@ -30,7 +30,7 @@ resource "google_compute_firewall" "web" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "ansible-terraform"
+  name         = "ansible-terraform-2"
   machine_type = "e2-medium"
 
 

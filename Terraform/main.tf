@@ -30,7 +30,7 @@ resource "google_compute_firewall" "web" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "terraform-client"
+  name         = "ansible-terraform"
   machine_type = "e2-medium"
 
 
@@ -55,7 +55,7 @@ resource "google_compute_instance" "vm_instance" {
     inline = ["echo 'Wait until SSH is ready'",
     "deb http://ppa.launchpad.net/ansible/ansible/ubuntu focal main",
     "sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367",
-    "sudo apt update",
+     "sudo apt update",
     "sudo apt install ansible"
      ]
 
@@ -70,12 +70,6 @@ resource "google_compute_instance" "vm_instance" {
     
   }
 
-  provisioner "local-exec" {
-    environment = {
-      "LANG" = "en_US.UTF-8"
-    }
-    command = "ansible-playbook -i ${self.network_interface[0].access_config[0].nat_ip}, --private-key ${local.private_key_path} playbook.yaml"
-  }
   
 }
 

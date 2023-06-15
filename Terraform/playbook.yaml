@@ -16,7 +16,7 @@
 
     - name: Clone the repository
       git:
-        repo: https://github.com/mngaruiya/WEEK9A.git
+        repo: https://github.com/mngaruiya/yolo.git
         dest: /opt/yolo
 
     - name: Install nodejs
